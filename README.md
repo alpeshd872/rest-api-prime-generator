@@ -1,2 +1,1 @@
-# rest-api-prime-generator
- 
+# rest-api-prime-series-generator
