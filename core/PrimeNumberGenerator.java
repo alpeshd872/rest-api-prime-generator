@@ -1,4 +1,4 @@
-package generator.prime;
+
 
 import java.util.Scanner;
 class PrimeNumberGenerator{
