@@ -13,15 +13,15 @@ import java.util.List;
 @Service
 public class PrimeServiceImpl implements PrimeService{
 
-    public static final String methodOne = "innerLoopTillnElement";
+    public static final String methodOne = "squareRootInner";
     public static final String methodTwo = "innerLoopTillnbyTwoElement";
     public static final String methodThree = "nestedFor";
 
     @Autowired
     private primeDAO primeDao;
-
+   
     @Override
-    public List<Integer> innerLoopTillnElement(Integer lowerBound, Integer upperBound) {
+    public List<Integer> squareRootInner(Integer lowerBound, Integer upperBound) {
     	Integer low = lowerBound;
     	Integer high = upperBound;
     	List<Integer> result = new ArrayList<>();
