@@ -6,13 +6,13 @@ public static void nestedFor(int low, int high) {
 	int f;
 	for (int i=low;i <= high;i++)
     {
-        f=0;
+        factor=0;
         for(int j=1;j<=i;j++)
         {
             if(i%j==0)
-                f++;
+                factor++;
         }
-        if(f==2) {
+        if(factor==2) {
           System.out.print(i+" ");  ;
         }
     }
