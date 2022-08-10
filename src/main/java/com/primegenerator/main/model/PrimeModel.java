@@ -4,11 +4,17 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 import javax.persistence.*;
-
+/*Entity defines that this class is an entity class and it should be mapped to database
+ * */
 @Entity
 @Table(name = "prime_data")
+/*The table annotation allow us to specify the table structure that will be used to persist the entity to database
+ * Table annotation have different attributes the name attributes gives the table name inside the database*/
+
 public class PrimeModel {
+	/* Id annotation specify that id property is a unique identifier and it is primary key*/
     @Id
+    /*Generated value specify the generation strategy for the primary key that we have define*/
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer loweBound;
@@ -17,11 +23,11 @@ public class PrimeModel {
     private BigDecimal timeElapsed;
     private String selectedMethod;
     private Integer noOfPrimes;
-
+ /* No args(Empty) Constructor */
     public PrimeModel() {
 
     }
-
+/*Parametarized constructor which will store the value on object creation */
     public PrimeModel(Integer loweBound, Integer upperBound, Timestamp timeStamp, BigDecimal executionTime,
                       String selectedMethod, Integer noPrimes) {
         super();
@@ -32,7 +38,7 @@ public class PrimeModel {
         this.selectedMethod = selectedMethod;
         this.noOfPrimes = noPrimes;
     }
-
+/*Getters and Setters*/
     public Integer getId() {
         return id;
     }
